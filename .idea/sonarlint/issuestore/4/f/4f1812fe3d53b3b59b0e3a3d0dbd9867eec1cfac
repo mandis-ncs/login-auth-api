@@ -1,0 +1,9 @@
+
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8§Ñ€†2J$dff250fa-af14-4505-ae3d-3aa1a1db70ee
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨Ñ€†2J$4ba0e690-5f26-47ba-affa-0ce58c8d62f2
+¢
+java:S3305"ZInject this field value directly into "securityFilterChain", the only method that uses it.(ÃîÑıÿÿÿÿ8©Ñ€†2J$71104942-c6b0-4434-b815-42b6a7e4ab37
+£
+java:S1128"`Remove this unused import 'org.springframework.security.web.util.matcher.AntPathRequestMatcher'.(¼¸ö8±§œ€†2J$f3ed332b-5b4f-43a5-aa19-d384c40dd8ea
