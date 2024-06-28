@@ -24,7 +24,7 @@ public class TokenService {
             Algorithm algorithm = Algorithm.HMAC256(secret);
 
             String token = JWT.create()
-                    .withIssuer("login-auth-api")
+                    .withIssuer("login-auth-api") //name of service that generate the token
                     .withSubject(user.getEmail())
                     .withExpiresAt(this.generateExpirationDate())
                     .sign(algorithm);

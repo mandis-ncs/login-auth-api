@@ -33,7 +33,7 @@ public class SecurityFilter extends OncePerRequestFilter { //execute for each re
 
         if (login != null) {
             User user = userRepository.findByEmail(login).orElseThrow(() -> new RuntimeException("User Not Found"));
-            var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
+            var authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")); //in this case is the only role we have
             var authentication = new UsernamePasswordAuthenticationToken(user, null, authorities);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
@@ -41,9 +41,9 @@ public class SecurityFilter extends OncePerRequestFilter { //execute for each re
     }
 
     private String recoverToken(HttpServletRequest request) {
-        var authHeader = request.getHeader("Authorization");
-        if (authHeader == null) return null;
-        return authHeader.replace("Bearer ", "");
+        var authHeader = request.getHeader("Authorization"); //if you change the local of the token, then change the name hero too
+        if (authHeader == null) return null; //we already did the verification on TokenService, but just in case
+        return authHeader.replace("Bearer ", ""); //replacing Bearer to rest just the token
     }
 
 
